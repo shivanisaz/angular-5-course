@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+
+  client-side-dev-env:
+    image: client-side-dev-env
+    volumes:
+      - ./:/home/app
+    ports:
+      - "7000:4200"
