@@ -1,7 +1,16 @@
 version: '3.4'
 
-services:
+services:                          
 
+  package-installer:
+    image: client-side-dev-env
+    volumes:
+      - ./:/home/app
+    entrypoint: yarn install
+    deploy:
+      restart_policy:
+        condition: on-failure
+        
   client-side-dev-env:
     image: client-side-dev-env
     volumes:
