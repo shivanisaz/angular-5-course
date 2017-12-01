@@ -1,0 +1,11 @@
+<h5> 
+  servers works!
+<hr>
+	<app-server> </app-server>
+	<!-- <div app-server> </div> -->
+	<!-- <div class="app-server"></div> -->
+	<br>
+	<button class="btn btn-primary" [disabled]="!allow" (click)="createNewServer()">Add Server</button>
+
+	<p *ngIf="serverCreated">{{newServerStatus}}</p>
+</h5>
